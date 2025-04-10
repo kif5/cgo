@@ -151,6 +151,50 @@ proxies:
   protocol: udp
   up: 11 Mbps
   down: 55 Mbps
+- name: dongtaiwang.com_0_6
+  server: 62.210.10.113
+  port: 22457
+  type: tuic
+  uuid: 083c4304-78e8-4702-b2ff-7dc899f74d90
+  password: dongtaiwang.com
+  alpn:
+  - h3
+  sni: bing.com
+  skip-cert-verify: true
+  reduce-rtt: true
+  udp-relay-mode: native
+  congestion-controller: bbr
+- name: dongtaiwang.com_0_7
+  type: mieru
+  server: 1.694463.xyz
+  port: 8067
+  transport: TCP
+  username: dongtaiwang.com
+  password: dongtaiwang.com
+- name: dongtaiwang.com_0_8
+  type: hysteria
+  server: 51.158.205.126
+  port: 36194
+  auth-str: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
+- name: dongtaiwang.com_0_9
+  type: hysteria
+  server: 51.158.205.126
+  port: 36194
+  auth-str: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -170,6 +214,10 @@ proxy-groups:
   - dongtaiwang.com_0_3
   - dongtaiwang.com_0_4
   - dongtaiwang.com_0_5
+  - dongtaiwang.com_0_6
+  - dongtaiwang.com_0_7
+  - dongtaiwang.com_0_8
+  - dongtaiwang.com_0_9
 - name: ♻️ 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -189,6 +237,10 @@ proxy-groups:
   - dongtaiwang.com_0_3
   - dongtaiwang.com_0_4
   - dongtaiwang.com_0_5
+  - dongtaiwang.com_0_6
+  - dongtaiwang.com_0_7
+  - dongtaiwang.com_0_8
+  - dongtaiwang.com_0_9
 - name: 📺 巴哈姆特
   type: select
   proxies:
@@ -207,6 +259,10 @@ proxy-groups:
   - dongtaiwang.com_0_3
   - dongtaiwang.com_0_4
   - dongtaiwang.com_0_5
+  - dongtaiwang.com_0_6
+  - dongtaiwang.com_0_7
+  - dongtaiwang.com_0_8
+  - dongtaiwang.com_0_9
 - name: 📺 哔哩哔哩
   type: select
   proxies:
@@ -225,6 +281,10 @@ proxy-groups:
   - dongtaiwang.com_0_3
   - dongtaiwang.com_0_4
   - dongtaiwang.com_0_5
+  - dongtaiwang.com_0_6
+  - dongtaiwang.com_0_7
+  - dongtaiwang.com_0_8
+  - dongtaiwang.com_0_9
 - name: 🌏 国内媒体
   type: select
   proxies:
@@ -243,6 +303,10 @@ proxy-groups:
   - dongtaiwang.com_0_3
   - dongtaiwang.com_0_4
   - dongtaiwang.com_0_5
+  - dongtaiwang.com_0_6
+  - dongtaiwang.com_0_7
+  - dongtaiwang.com_0_8
+  - dongtaiwang.com_0_9
 - name: 🌍 国外媒体
   type: select
   proxies:
@@ -261,6 +325,10 @@ proxy-groups:
   - dongtaiwang.com_0_3
   - dongtaiwang.com_0_4
   - dongtaiwang.com_0_5
+  - dongtaiwang.com_0_6
+  - dongtaiwang.com_0_7
+  - dongtaiwang.com_0_8
+  - dongtaiwang.com_0_9
 - name: 📲 电报信息
   type: select
   proxies:
@@ -279,6 +347,10 @@ proxy-groups:
   - dongtaiwang.com_0_3
   - dongtaiwang.com_0_4
   - dongtaiwang.com_0_5
+  - dongtaiwang.com_0_6
+  - dongtaiwang.com_0_7
+  - dongtaiwang.com_0_8
+  - dongtaiwang.com_0_9
 - name: Ⓜ️ 微软云盘
   type: select
   proxies:
@@ -297,6 +369,10 @@ proxy-groups:
   - dongtaiwang.com_0_3
   - dongtaiwang.com_0_4
   - dongtaiwang.com_0_5
+  - dongtaiwang.com_0_6
+  - dongtaiwang.com_0_7
+  - dongtaiwang.com_0_8
+  - dongtaiwang.com_0_9
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
@@ -315,6 +391,10 @@ proxy-groups:
   - dongtaiwang.com_0_3
   - dongtaiwang.com_0_4
   - dongtaiwang.com_0_5
+  - dongtaiwang.com_0_6
+  - dongtaiwang.com_0_7
+  - dongtaiwang.com_0_8
+  - dongtaiwang.com_0_9
 - name: 🍎 苹果服务
   type: select
   proxies:
@@ -333,6 +413,10 @@ proxy-groups:
   - dongtaiwang.com_0_3
   - dongtaiwang.com_0_4
   - dongtaiwang.com_0_5
+  - dongtaiwang.com_0_6
+  - dongtaiwang.com_0_7
+  - dongtaiwang.com_0_8
+  - dongtaiwang.com_0_9
 - name: 📢 谷歌FCM
   type: select
   proxies:
@@ -351,6 +435,10 @@ proxy-groups:
   - dongtaiwang.com_0_3
   - dongtaiwang.com_0_4
   - dongtaiwang.com_0_5
+  - dongtaiwang.com_0_6
+  - dongtaiwang.com_0_7
+  - dongtaiwang.com_0_8
+  - dongtaiwang.com_0_9
 - name: 🤖 OpenAI
   type: select
   proxies:
@@ -369,6 +457,10 @@ proxy-groups:
   - dongtaiwang.com_0_3
   - dongtaiwang.com_0_4
   - dongtaiwang.com_0_5
+  - dongtaiwang.com_0_6
+  - dongtaiwang.com_0_7
+  - dongtaiwang.com_0_8
+  - dongtaiwang.com_0_9
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -386,6 +478,10 @@ proxy-groups:
   - dongtaiwang.com_0_3
   - dongtaiwang.com_0_4
   - dongtaiwang.com_0_5
+  - dongtaiwang.com_0_6
+  - dongtaiwang.com_0_7
+  - dongtaiwang.com_0_8
+  - dongtaiwang.com_0_9
 - name: 🛑 全球拦截
   type: select
   proxies:
@@ -404,6 +500,10 @@ proxy-groups:
   - dongtaiwang.com_0_3
   - dongtaiwang.com_0_4
   - dongtaiwang.com_0_5
+  - dongtaiwang.com_0_6
+  - dongtaiwang.com_0_7
+  - dongtaiwang.com_0_8
+  - dongtaiwang.com_0_9
 - name: 🐟 漏网之鱼
   type: select
   proxies:
@@ -422,6 +522,10 @@ proxy-groups:
   - dongtaiwang.com_0_3
   - dongtaiwang.com_0_4
   - dongtaiwang.com_0_5
+  - dongtaiwang.com_0_6
+  - dongtaiwang.com_0_7
+  - dongtaiwang.com_0_8
+  - dongtaiwang.com_0_9
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
 - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
