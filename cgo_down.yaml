@@ -166,7 +166,7 @@ proxies:
   congestion-controller: bbr
 - name: dongtaiwang.com_0_7
   type: mieru
-  server: 1.694463.xyz
+  server: 62.210.6.186
   port: 8067
   transport: TCP
   username: dongtaiwang.com
