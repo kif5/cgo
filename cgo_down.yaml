@@ -62,16 +62,16 @@ proxies:
 - name: 🇷🇺 RU-Hysteria2 | 0-0
   type: hysteria2
   server: 46.17.41.217
-  port: 4395
+  port: 64816
   password: dongtaiwang.com
-  sni: www.bing.com
+  sni: apple.com
   skip-cert-verify: true
 - name: 🇷🇺 RU-Hysteria2 | 1-0
   type: hysteria2
   server: 46.29.163.171
-  port: 35751
+  port: 32555
   password: dongtaiwang.com
-  sni: www.bing.com
+  sni: apple.com
   skip-cert-verify: true
 - name: 🇨🇳 TW-vless | 0-0
   type: vless
@@ -100,7 +100,7 @@ proxies:
   protocol: udp
   up: 11 Mbps
   down: 55 Mbps
-- name: dongtaiwang.com_0_1
+- name: dongtaiwang.com_01
   server: 108.181.5.131
   port: 34008
   type: tuic
@@ -113,77 +113,7 @@ proxies:
   reduce-rtt: true
   udp-relay-mode: native
   congestion-controller: bbr
-- name: dongtaiwang.com_0_2
-  type: mieru
-  server: 108.181.23.41
-  port: 28676
-  transport: TCP
-  username: dongtaiwang.com
-  password: dongtaiwang.com
-- name: dongtaiwang.com_0_3
-  type: mieru
-  server: 185.22.155.105
-  port: 25622
-  transport: TCP
-  username: dongtaiwang.com
-  password: dongtaiwang.com
-- name: dongtaiwang.com_0_4
-  type: hysteria
-  server: 108.181.24.77
-  port: 11512
-  auth-str: dongtaiwang.com
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  up: 11 Mbps
-  down: 55 Mbps
-- name: dongtaiwang.com_0_5
-  type: hysteria
-  server: 108.181.24.77
-  port: 11512
-  auth-str: dongtaiwang.com
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  up: 11 Mbps
-  down: 55 Mbps
-- name: dongtaiwang.com_0_6
-  server: 62.210.10.113
-  port: 22457
-  type: tuic
-  uuid: 083c4304-78e8-4702-b2ff-7dc899f74d90
-  password: dongtaiwang.com
-  alpn:
-  - h3
-  sni: bing.com
-  skip-cert-verify: true
-  reduce-rtt: true
-  udp-relay-mode: native
-  congestion-controller: bbr
-- name: dongtaiwang.com_0_7
-  type: mieru
-  server: 62.210.6.186
-  port: 8067
-  transport: TCP
-  username: dongtaiwang.com
-  password: dongtaiwang.com
-- name: dongtaiwang.com_0_8
-  type: hysteria
-  server: 51.158.205.126
-  port: 36194
-  auth-str: dongtaiwang.com
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  up: 11 Mbps
-  down: 55 Mbps
-- name: dongtaiwang.com_0_9
+- name: dongtaiwang.com_02
   type: hysteria
   server: 51.158.205.126
   port: 36194
@@ -209,15 +139,8 @@ proxy-groups:
   - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
-  - dongtaiwang.com_0_1
-  - dongtaiwang.com_0_2
-  - dongtaiwang.com_0_3
-  - dongtaiwang.com_0_4
-  - dongtaiwang.com_0_5
-  - dongtaiwang.com_0_6
-  - dongtaiwang.com_0_7
-  - dongtaiwang.com_0_8
-  - dongtaiwang.com_0_9
+  - dongtaiwang.com_01
+  - dongtaiwang.com_02
 - name: ♻️ 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -232,15 +155,8 @@ proxy-groups:
   - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
-  - dongtaiwang.com_0_1
-  - dongtaiwang.com_0_2
-  - dongtaiwang.com_0_3
-  - dongtaiwang.com_0_4
-  - dongtaiwang.com_0_5
-  - dongtaiwang.com_0_6
-  - dongtaiwang.com_0_7
-  - dongtaiwang.com_0_8
-  - dongtaiwang.com_0_9
+  - dongtaiwang.com_01
+  - dongtaiwang.com_02
 - name: 📺 巴哈姆特
   type: select
   proxies:
@@ -254,15 +170,8 @@ proxy-groups:
   - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
-  - dongtaiwang.com_0_1
-  - dongtaiwang.com_0_2
-  - dongtaiwang.com_0_3
-  - dongtaiwang.com_0_4
-  - dongtaiwang.com_0_5
-  - dongtaiwang.com_0_6
-  - dongtaiwang.com_0_7
-  - dongtaiwang.com_0_8
-  - dongtaiwang.com_0_9
+  - dongtaiwang.com_01
+  - dongtaiwang.com_02
 - name: 📺 哔哩哔哩
   type: select
   proxies:
@@ -276,15 +185,8 @@ proxy-groups:
   - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
-  - dongtaiwang.com_0_1
-  - dongtaiwang.com_0_2
-  - dongtaiwang.com_0_3
-  - dongtaiwang.com_0_4
-  - dongtaiwang.com_0_5
-  - dongtaiwang.com_0_6
-  - dongtaiwang.com_0_7
-  - dongtaiwang.com_0_8
-  - dongtaiwang.com_0_9
+  - dongtaiwang.com_01
+  - dongtaiwang.com_02
 - name: 🌏 国内媒体
   type: select
   proxies:
@@ -298,15 +200,8 @@ proxy-groups:
   - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
-  - dongtaiwang.com_0_1
-  - dongtaiwang.com_0_2
-  - dongtaiwang.com_0_3
-  - dongtaiwang.com_0_4
-  - dongtaiwang.com_0_5
-  - dongtaiwang.com_0_6
-  - dongtaiwang.com_0_7
-  - dongtaiwang.com_0_8
-  - dongtaiwang.com_0_9
+  - dongtaiwang.com_01
+  - dongtaiwang.com_02
 - name: 🌍 国外媒体
   type: select
   proxies:
@@ -320,15 +215,8 @@ proxy-groups:
   - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
-  - dongtaiwang.com_0_1
-  - dongtaiwang.com_0_2
-  - dongtaiwang.com_0_3
-  - dongtaiwang.com_0_4
-  - dongtaiwang.com_0_5
-  - dongtaiwang.com_0_6
-  - dongtaiwang.com_0_7
-  - dongtaiwang.com_0_8
-  - dongtaiwang.com_0_9
+  - dongtaiwang.com_01
+  - dongtaiwang.com_02
 - name: 📲 电报信息
   type: select
   proxies:
@@ -342,15 +230,8 @@ proxy-groups:
   - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
-  - dongtaiwang.com_0_1
-  - dongtaiwang.com_0_2
-  - dongtaiwang.com_0_3
-  - dongtaiwang.com_0_4
-  - dongtaiwang.com_0_5
-  - dongtaiwang.com_0_6
-  - dongtaiwang.com_0_7
-  - dongtaiwang.com_0_8
-  - dongtaiwang.com_0_9
+  - dongtaiwang.com_01
+  - dongtaiwang.com_02
 - name: Ⓜ️ 微软云盘
   type: select
   proxies:
@@ -364,15 +245,8 @@ proxy-groups:
   - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
-  - dongtaiwang.com_0_1
-  - dongtaiwang.com_0_2
-  - dongtaiwang.com_0_3
-  - dongtaiwang.com_0_4
-  - dongtaiwang.com_0_5
-  - dongtaiwang.com_0_6
-  - dongtaiwang.com_0_7
-  - dongtaiwang.com_0_8
-  - dongtaiwang.com_0_9
+  - dongtaiwang.com_01
+  - dongtaiwang.com_02
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
@@ -386,15 +260,8 @@ proxy-groups:
   - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
-  - dongtaiwang.com_0_1
-  - dongtaiwang.com_0_2
-  - dongtaiwang.com_0_3
-  - dongtaiwang.com_0_4
-  - dongtaiwang.com_0_5
-  - dongtaiwang.com_0_6
-  - dongtaiwang.com_0_7
-  - dongtaiwang.com_0_8
-  - dongtaiwang.com_0_9
+  - dongtaiwang.com_01
+  - dongtaiwang.com_02
 - name: 🍎 苹果服务
   type: select
   proxies:
@@ -408,15 +275,8 @@ proxy-groups:
   - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
-  - dongtaiwang.com_0_1
-  - dongtaiwang.com_0_2
-  - dongtaiwang.com_0_3
-  - dongtaiwang.com_0_4
-  - dongtaiwang.com_0_5
-  - dongtaiwang.com_0_6
-  - dongtaiwang.com_0_7
-  - dongtaiwang.com_0_8
-  - dongtaiwang.com_0_9
+  - dongtaiwang.com_01
+  - dongtaiwang.com_02
 - name: 📢 谷歌FCM
   type: select
   proxies:
@@ -430,15 +290,8 @@ proxy-groups:
   - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
-  - dongtaiwang.com_0_1
-  - dongtaiwang.com_0_2
-  - dongtaiwang.com_0_3
-  - dongtaiwang.com_0_4
-  - dongtaiwang.com_0_5
-  - dongtaiwang.com_0_6
-  - dongtaiwang.com_0_7
-  - dongtaiwang.com_0_8
-  - dongtaiwang.com_0_9
+  - dongtaiwang.com_01
+  - dongtaiwang.com_02
 - name: 🤖 OpenAI
   type: select
   proxies:
@@ -452,15 +305,8 @@ proxy-groups:
   - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
-  - dongtaiwang.com_0_1
-  - dongtaiwang.com_0_2
-  - dongtaiwang.com_0_3
-  - dongtaiwang.com_0_4
-  - dongtaiwang.com_0_5
-  - dongtaiwang.com_0_6
-  - dongtaiwang.com_0_7
-  - dongtaiwang.com_0_8
-  - dongtaiwang.com_0_9
+  - dongtaiwang.com_01
+  - dongtaiwang.com_02
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -473,15 +319,8 @@ proxy-groups:
   - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
-  - dongtaiwang.com_0_1
-  - dongtaiwang.com_0_2
-  - dongtaiwang.com_0_3
-  - dongtaiwang.com_0_4
-  - dongtaiwang.com_0_5
-  - dongtaiwang.com_0_6
-  - dongtaiwang.com_0_7
-  - dongtaiwang.com_0_8
-  - dongtaiwang.com_0_9
+  - dongtaiwang.com_01
+  - dongtaiwang.com_02
 - name: 🛑 全球拦截
   type: select
   proxies:
@@ -495,15 +334,8 @@ proxy-groups:
   - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
-  - dongtaiwang.com_0_1
-  - dongtaiwang.com_0_2
-  - dongtaiwang.com_0_3
-  - dongtaiwang.com_0_4
-  - dongtaiwang.com_0_5
-  - dongtaiwang.com_0_6
-  - dongtaiwang.com_0_7
-  - dongtaiwang.com_0_8
-  - dongtaiwang.com_0_9
+  - dongtaiwang.com_01
+  - dongtaiwang.com_02
 - name: 🐟 漏网之鱼
   type: select
   proxies:
@@ -517,15 +349,8 @@ proxy-groups:
   - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
-  - dongtaiwang.com_0_1
-  - dongtaiwang.com_0_2
-  - dongtaiwang.com_0_3
-  - dongtaiwang.com_0_4
-  - dongtaiwang.com_0_5
-  - dongtaiwang.com_0_6
-  - dongtaiwang.com_0_7
-  - dongtaiwang.com_0_8
-  - dongtaiwang.com_0_9
+  - dongtaiwang.com_01
+  - dongtaiwang.com_02
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
 - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
