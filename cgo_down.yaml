@@ -61,17 +61,10 @@ proxies:
   - h3
 - name: 🇷🇺 RU-Hysteria2 | 0-0
   type: hysteria2
-  server: 46.17.41.217
-  port: 64816
+  server: hy2.694463.xyz
+  port: 10011
   password: dongtaiwang.com
-  sni: apple.com
-  skip-cert-verify: true
-- name: 🇷🇺 RU-Hysteria2 | 1-0
-  type: hysteria2
-  server: 46.29.163.171
-  port: 32555
-  password: dongtaiwang.com
-  sni: apple.com
+  sni: www.bing.com
   skip-cert-verify: true
 - name: 🇨🇳 TW-vless | 0-0
   type: vless
@@ -206,7 +199,6 @@ proxy-groups:
   - 🇷🇺 RU-hysteria | 8-1
   - 🇷🇺 RU-Hysteria | 1-0
   - 🇷🇺 RU-Hysteria2 | 0-0
-  - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
   - dongtaiwang.com_01
@@ -229,7 +221,6 @@ proxy-groups:
   - 🇷🇺 RU-hysteria | 8-1
   - 🇷🇺 RU-Hysteria | 1-0
   - 🇷🇺 RU-Hysteria2 | 0-0
-  - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
   - dongtaiwang.com_01
@@ -251,7 +242,6 @@ proxy-groups:
   - 🇷🇺 RU-hysteria | 8-1
   - 🇷🇺 RU-Hysteria | 1-0
   - 🇷🇺 RU-Hysteria2 | 0-0
-  - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
   - dongtaiwang.com_01
@@ -273,7 +263,6 @@ proxy-groups:
   - 🇷🇺 RU-hysteria | 8-1
   - 🇷🇺 RU-Hysteria | 1-0
   - 🇷🇺 RU-Hysteria2 | 0-0
-  - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
   - dongtaiwang.com_01
@@ -295,7 +284,6 @@ proxy-groups:
   - 🇷🇺 RU-hysteria | 8-1
   - 🇷🇺 RU-Hysteria | 1-0
   - 🇷🇺 RU-Hysteria2 | 0-0
-  - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
   - dongtaiwang.com_01
@@ -317,7 +305,6 @@ proxy-groups:
   - 🇷🇺 RU-hysteria | 8-1
   - 🇷🇺 RU-Hysteria | 1-0
   - 🇷🇺 RU-Hysteria2 | 0-0
-  - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
   - dongtaiwang.com_01
@@ -339,7 +326,6 @@ proxy-groups:
   - 🇷🇺 RU-hysteria | 8-1
   - 🇷🇺 RU-Hysteria | 1-0
   - 🇷🇺 RU-Hysteria2 | 0-0
-  - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
   - dongtaiwang.com_01
@@ -361,7 +347,6 @@ proxy-groups:
   - 🇷🇺 RU-hysteria | 8-1
   - 🇷🇺 RU-Hysteria | 1-0
   - 🇷🇺 RU-Hysteria2 | 0-0
-  - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
   - dongtaiwang.com_01
@@ -383,7 +368,6 @@ proxy-groups:
   - 🇷🇺 RU-hysteria | 8-1
   - 🇷🇺 RU-Hysteria | 1-0
   - 🇷🇺 RU-Hysteria2 | 0-0
-  - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
   - dongtaiwang.com_01
@@ -405,7 +389,6 @@ proxy-groups:
   - 🇷🇺 RU-hysteria | 8-1
   - 🇷🇺 RU-Hysteria | 1-0
   - 🇷🇺 RU-Hysteria2 | 0-0
-  - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
   - dongtaiwang.com_01
@@ -427,7 +410,6 @@ proxy-groups:
   - 🇷🇺 RU-hysteria | 8-1
   - 🇷🇺 RU-Hysteria | 1-0
   - 🇷🇺 RU-Hysteria2 | 0-0
-  - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
   - dongtaiwang.com_01
@@ -449,7 +431,6 @@ proxy-groups:
   - 🇷🇺 RU-hysteria | 8-1
   - 🇷🇺 RU-Hysteria | 1-0
   - 🇷🇺 RU-Hysteria2 | 0-0
-  - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
   - dongtaiwang.com_01
@@ -470,7 +451,6 @@ proxy-groups:
   - 🇷🇺 RU-hysteria | 8-1
   - 🇷🇺 RU-Hysteria | 1-0
   - 🇷🇺 RU-Hysteria2 | 0-0
-  - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
   - dongtaiwang.com_01
@@ -492,7 +472,6 @@ proxy-groups:
   - 🇷🇺 RU-hysteria | 8-1
   - 🇷🇺 RU-Hysteria | 1-0
   - 🇷🇺 RU-Hysteria2 | 0-0
-  - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
   - dongtaiwang.com_01
@@ -514,7 +493,6 @@ proxy-groups:
   - 🇷🇺 RU-hysteria | 8-1
   - 🇷🇺 RU-Hysteria | 1-0
   - 🇷🇺 RU-Hysteria2 | 0-0
-  - 🇷🇺 RU-Hysteria2 | 1-0
   - 🇨🇳 TW-vless | 0-0
   - dongtaiwang.com_0
   - dongtaiwang.com_01
