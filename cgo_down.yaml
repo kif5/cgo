@@ -44990,57 +44990,25 @@ proxies:
   up: 11 Mbps
   down: 55 Mbps
 - name: dongtaiwang.com_01
-  server: 108.181.5.131
-  port: 34008
-  type: tuic
-  uuid: f84c91a4-0125-4495-82f3-732cd0a0bba8
-  password: dongtaiwang.com
-  alpn:
-  - h3
-  sni: bing.com
-  skip-cert-verify: true
-  reduce-rtt: true
-  udp-relay-mode: native
-  congestion-controller: bbr
-- name: dongtaiwang.com_02
   type: mieru
   server: 108.181.23.41
   port: 28676
   transport: TCP
   username: dongtaiwang.com
   password: dongtaiwang.com
+- name: dongtaiwang.com_02
+  type: hysteria
+  server: 108.181.24.77
+  port: 11512
+  auth-str: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
 - name: dongtaiwang.com_03
-  type: mieru
-  server: 185.22.155.105
-  port: 25622
-  transport: TCP
-  username: dongtaiwang.com
-  password: dongtaiwang.com
-- name: dongtaiwang.com_04
-  type: hysteria
-  server: 108.181.24.77
-  port: 11512
-  auth-str: dongtaiwang.com
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  up: 11 Mbps
-  down: 55 Mbps
-- name: dongtaiwang.com_05
-  type: hysteria
-  server: 108.181.24.77
-  port: 11512
-  auth-str: dongtaiwang.com
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  up: 11 Mbps
-  down: 55 Mbps
-- name: dongtaiwang.com_06
   server: 62.210.10.113
   port: 22457
   type: tuic
@@ -45053,7 +45021,7 @@ proxies:
   reduce-rtt: true
   udp-relay-mode: native
   congestion-controller: bbr
-- name: dongtaiwang.com_07
+- name: dongtaiwang.com_04
   type: hysteria
   server: 123.30.149.21
   port: 29597
@@ -45065,7 +45033,7 @@ proxies:
   protocol: udp
   up: 11 Mbps
   down: 55 Mbps
-- name: dongtaiwang.com_08
+- name: dongtaiwang.com_05
   type: hysteria
   server: 51.158.205.126
   port: 36194
@@ -45077,7 +45045,7 @@ proxies:
   protocol: udp
   up: 11 Mbps
   down: 55 Mbps
-- name: dongtaiwang.com_09
+- name: dongtaiwang.com_06
   type: hysteria
   server: 51.158.205.126
   port: 36194
@@ -48101,9 +48069,6 @@ proxy-groups:
   - dongtaiwang.com_04
   - dongtaiwang.com_05
   - dongtaiwang.com_06
-  - dongtaiwang.com_07
-  - dongtaiwang.com_08
-  - dongtaiwang.com_09
 - name: ♻️ 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
@@ -51116,9 +51081,6 @@ proxy-groups:
   - dongtaiwang.com_04
   - dongtaiwang.com_05
   - dongtaiwang.com_06
-  - dongtaiwang.com_07
-  - dongtaiwang.com_08
-  - dongtaiwang.com_09
 - name: 📺 巴哈姆特
   type: select
   proxies:
@@ -54130,9 +54092,6 @@ proxy-groups:
   - dongtaiwang.com_04
   - dongtaiwang.com_05
   - dongtaiwang.com_06
-  - dongtaiwang.com_07
-  - dongtaiwang.com_08
-  - dongtaiwang.com_09
 - name: 📺 哔哩哔哩
   type: select
   proxies:
@@ -57144,9 +57103,6 @@ proxy-groups:
   - dongtaiwang.com_04
   - dongtaiwang.com_05
   - dongtaiwang.com_06
-  - dongtaiwang.com_07
-  - dongtaiwang.com_08
-  - dongtaiwang.com_09
 - name: 🌏 国内媒体
   type: select
   proxies:
@@ -60158,9 +60114,6 @@ proxy-groups:
   - dongtaiwang.com_04
   - dongtaiwang.com_05
   - dongtaiwang.com_06
-  - dongtaiwang.com_07
-  - dongtaiwang.com_08
-  - dongtaiwang.com_09
 - name: 🌍 国外媒体
   type: select
   proxies:
@@ -63172,9 +63125,6 @@ proxy-groups:
   - dongtaiwang.com_04
   - dongtaiwang.com_05
   - dongtaiwang.com_06
-  - dongtaiwang.com_07
-  - dongtaiwang.com_08
-  - dongtaiwang.com_09
 - name: 📲 电报信息
   type: select
   proxies:
@@ -66186,9 +66136,6 @@ proxy-groups:
   - dongtaiwang.com_04
   - dongtaiwang.com_05
   - dongtaiwang.com_06
-  - dongtaiwang.com_07
-  - dongtaiwang.com_08
-  - dongtaiwang.com_09
 - name: Ⓜ️ 微软云盘
   type: select
   proxies:
@@ -69200,9 +69147,6 @@ proxy-groups:
   - dongtaiwang.com_04
   - dongtaiwang.com_05
   - dongtaiwang.com_06
-  - dongtaiwang.com_07
-  - dongtaiwang.com_08
-  - dongtaiwang.com_09
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
@@ -72214,9 +72158,6 @@ proxy-groups:
   - dongtaiwang.com_04
   - dongtaiwang.com_05
   - dongtaiwang.com_06
-  - dongtaiwang.com_07
-  - dongtaiwang.com_08
-  - dongtaiwang.com_09
 - name: 🍎 苹果服务
   type: select
   proxies:
@@ -75228,9 +75169,6 @@ proxy-groups:
   - dongtaiwang.com_04
   - dongtaiwang.com_05
   - dongtaiwang.com_06
-  - dongtaiwang.com_07
-  - dongtaiwang.com_08
-  - dongtaiwang.com_09
 - name: 📢 谷歌FCM
   type: select
   proxies:
@@ -78242,9 +78180,6 @@ proxy-groups:
   - dongtaiwang.com_04
   - dongtaiwang.com_05
   - dongtaiwang.com_06
-  - dongtaiwang.com_07
-  - dongtaiwang.com_08
-  - dongtaiwang.com_09
 - name: 🤖 OpenAI
   type: select
   proxies:
@@ -81256,9 +81191,6 @@ proxy-groups:
   - dongtaiwang.com_04
   - dongtaiwang.com_05
   - dongtaiwang.com_06
-  - dongtaiwang.com_07
-  - dongtaiwang.com_08
-  - dongtaiwang.com_09
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -84269,9 +84201,6 @@ proxy-groups:
   - dongtaiwang.com_04
   - dongtaiwang.com_05
   - dongtaiwang.com_06
-  - dongtaiwang.com_07
-  - dongtaiwang.com_08
-  - dongtaiwang.com_09
 - name: 🛑 全球拦截
   type: select
   proxies:
@@ -87283,9 +87212,6 @@ proxy-groups:
   - dongtaiwang.com_04
   - dongtaiwang.com_05
   - dongtaiwang.com_06
-  - dongtaiwang.com_07
-  - dongtaiwang.com_08
-  - dongtaiwang.com_09
 - name: 🐟 漏网之鱼
   type: select
   proxies:
@@ -90297,9 +90223,6 @@ proxy-groups:
   - dongtaiwang.com_04
   - dongtaiwang.com_05
   - dongtaiwang.com_06
-  - dongtaiwang.com_07
-  - dongtaiwang.com_08
-  - dongtaiwang.com_09
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
 - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
