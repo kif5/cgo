@@ -182,16 +182,6 @@ proxy-groups:
   max-failed-times: 5
   name: ♻️延迟最低
   type: url-test
-  proxies:
-  - United-States-01
-  - United-States-02
-  - Russia-01
-  - United-States-03
-  - United-States-04
-  - The-Netherlands-01
-  - Vietnam-01
-  - France-01
-  - France-02
 - use: null
   url: http://www.gstatic.com/generate_204
   interval: 30
@@ -201,29 +191,9 @@ proxy-groups:
   max-failed-times: 5
   name: ⚠️故障切换
   type: fallback
-  proxies:
-  - United-States-01
-  - United-States-02
-  - Russia-01
-  - United-States-03
-  - United-States-04
-  - The-Netherlands-01
-  - Vietnam-01
-  - France-01
-  - France-02
 - use: null
   name: 🖐️手动切换
   type: select
-  proxies:
-  - United-States-01
-  - United-States-02
-  - Russia-01
-  - United-States-03
-  - United-States-04
-  - The-Netherlands-01
-  - Vietnam-01
-  - France-01
-  - France-02
 - name: ✅默认代理
   type: select
   proxies:
@@ -282,16 +252,6 @@ proxy-groups:
   name: 🇭🇰香港节点
   type: url-test
   filter: 港|HK|hk|Hong Kong|HongKong|hongkong
-  proxies:
-  - United-States-01
-  - United-States-02
-  - Russia-01
-  - United-States-03
-  - United-States-04
-  - The-Netherlands-01
-  - Vietnam-01
-  - France-01
-  - France-02
 - use: null
   url: http://www.gstatic.com/generate_204
   interval: 30
@@ -302,16 +262,6 @@ proxy-groups:
   name: 🇯🇵日本节点
   type: url-test
   filter: 日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
-  proxies:
-  - United-States-01
-  - United-States-02
-  - Russia-01
-  - United-States-03
-  - United-States-04
-  - The-Netherlands-01
-  - Vietnam-01
-  - France-01
-  - France-02
 - use: null
   url: http://www.gstatic.com/generate_204
   interval: 30
@@ -322,16 +272,6 @@ proxy-groups:
   name: 🇺🇲美国节点
   type: url-test
   filter: 美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
-  proxies:
-  - United-States-01
-  - United-States-02
-  - Russia-01
-  - United-States-03
-  - United-States-04
-  - The-Netherlands-01
-  - Vietnam-01
-  - France-01
-  - France-02
 - use: null
   url: http://www.gstatic.com/generate_204
   interval: 30
@@ -342,16 +282,6 @@ proxy-groups:
   name: 🇨🇳台湾节点
   type: url-test
   filter: 台|新北|彰化|TW|Taiwan
-  proxies:
-  - United-States-01
-  - United-States-02
-  - Russia-01
-  - United-States-03
-  - United-States-04
-  - The-Netherlands-01
-  - Vietnam-01
-  - France-01
-  - France-02
 - use: null
   url: http://www.gstatic.com/generate_204
   interval: 30
@@ -362,28 +292,19 @@ proxy-groups:
   name: 🇸🇬狮城节点
   type: url-test
   filter: 新加坡|坡|狮城|SG|Singapore
-  proxies:
-  - United-States-01
-  - United-States-02
-  - Russia-01
-  - United-States-03
-  - United-States-04
-  - The-Netherlands-01
-  - Vietnam-01
-  - France-01
-  - France-02
 - name: AUTO
   type: select
   proxies:
-  - United-States-01
-  - United-States-02
-  - Russia-01
-  - United-States-03
-  - United-States-04
-  - The-Netherlands-01
-  - Vietnam-01
-  - France-01
-  - France-02
+  - dongtaiwang.com_0
+  - dongtaiwang.com_0_s1_d1
+  - dongtaiwang.com_0_s2_d1
+  - dongtaiwang.com_0_s3_d1
+  - dongtaiwang.com_0_s4_d1
+  - dongtaiwang.com_0_s5_d1
+  - dongtaiwang.com_0_s6_d1
+  - dongtaiwang.com_0_s7_d1
+  - dongtaiwang.com_0_s8_d1
+  - dongtaiwang.com_0_s9_d1
 rule-providers-general:
   type: http
   behavior: classical
@@ -434,7 +355,19 @@ rules:
 - GEOIP,cn,🌐默认直连,no-resolve
 - MATCH,🐟漏网之鱼
 proxies:
-- name: United-States-01
+- name: dongtaiwang.com_0
+  type: hysteria
+  server: 62.210.10.113
+  port: 22662
+  auth-str: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
+- name: dongtaiwang.com_0_s1_d1
   server: 108.181.5.131
   port: 34008
   type: tuic
@@ -447,21 +380,21 @@ proxies:
   reduce-rtt: true
   udp-relay-mode: native
   congestion-controller: bbr
-- name: United-States-02
+- name: dongtaiwang.com_0_s2_d1
   type: mieru
   server: 108.181.23.41
   port: 28676
   transport: TCP
   username: dongtaiwang.com
   password: dongtaiwang.com
-- name: Russia-01
+- name: dongtaiwang.com_0_s3_d1
   type: mieru
   server: 185.22.155.105
   port: 25622
   transport: TCP
   username: dongtaiwang.com
   password: dongtaiwang.com
-- name: United-States-03
+- name: dongtaiwang.com_0_s4_d1
   type: hysteria
   server: 108.181.24.77
   port: 11512
@@ -473,7 +406,7 @@ proxies:
   protocol: udp
   up: 11 Mbps
   down: 55 Mbps
-- name: United-States-04
+- name: dongtaiwang.com_0_s5_d1
   type: hysteria
   server: 108.181.24.77
   port: 11512
@@ -485,7 +418,7 @@ proxies:
   protocol: udp
   up: 11 Mbps
   down: 55 Mbps
-- name: The-Netherlands-01
+- name: dongtaiwang.com_0_s6_d1
   server: 62.210.10.113
   port: 22457
   type: tuic
@@ -498,7 +431,7 @@ proxies:
   reduce-rtt: true
   udp-relay-mode: native
   congestion-controller: bbr
-- name: Vietnam-01
+- name: dongtaiwang.com_0_s7_d1
   type: hysteria
   server: 123.30.149.21
   port: 29597
@@ -510,7 +443,7 @@ proxies:
   protocol: udp
   up: 11 Mbps
   down: 55 Mbps
-- name: France-01
+- name: dongtaiwang.com_0_s8_d1
   type: hysteria
   server: 51.158.205.126
   port: 36194
@@ -522,7 +455,7 @@ proxies:
   protocol: udp
   up: 11 Mbps
   down: 55 Mbps
-- name: France-02
+- name: dongtaiwang.com_0_s9_d1
   type: hysteria
   server: 51.158.205.126
   port: 36194
