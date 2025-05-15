@@ -1,0 +1,148 @@
+port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+unified-delay: true
+global-client-fingerprint: chrome
+dns:
+  enable: true
+  listen: :53
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+  - 223.5.5.5
+  - 180.76.76.76
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+  fallback:
+  - 1.1.1.1
+  - 8.8.8.8
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+    - 240.0.0.0/4
+proxies:
+- name: NL-01
+  type: hysteria
+  server: 62.210.10.113
+  port: 22662
+  auth-str: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
+- name: US-01
+  type: mieru
+  server: 108.181.23.41
+  port: 28676
+  transport: TCP
+  username: dongtaiwang.com
+  password: dongtaiwang.com
+- name: RU-01
+  type: mieru
+  server: 185.22.155.105
+  port: 25622
+  transport: TCP
+  username: dongtaiwang.com
+  password: dongtaiwang.com
+- name: US-02
+  type: hysteria
+  server: 108.181.24.77
+  port: 11512
+  auth-str: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
+- name: NL-02
+  server: 62.210.10.113
+  port: 22457
+  type: tuic
+  uuid: 083c4304-78e8-4702-b2ff-7dc899f74d90
+  password: dongtaiwang.com
+  alpn:
+  - h3
+  sni: bing.com
+  skip-cert-verify: true
+  reduce-rtt: true
+  udp-relay-mode: native
+  congestion-controller: bbr
+- name: VN-01
+  type: hysteria
+  server: 123.30.149.21
+  port: 29597
+  auth-str: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
+- name: FR-01
+  type: hysteria
+  server: 51.158.205.126
+  port: 36194
+  auth-str: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
+- name: FR-02
+  type: hysteria
+  server: 51.158.205.126
+  port: 36194
+  auth-str: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
+proxy-groups:
+- name: ♻️ 自动选择
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - NL-01
+  - US-01
+  - RU-01
+  - US-02
+  - NL-02
+  - VN-01
+  - FR-01
+  - FR-02
+- name: 🌍 选择代理
+  type: select
+  proxies:
+  - ♻️ 自动选择
+- name: AUTO
+  type: select
+  proxies:
+  - NL-01
+  - US-01
+  - RU-01
+  - US-02
+  - NL-02
+  - VN-01
+  - FR-01
+  - FR-02
+rules:
+- GEOIP,LAN,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,🌍 选择代理
