@@ -6,19 +6,19 @@ unified-delay: true
 global-client-fingerprint: chrome
 dns:
   enable: true
-  listen: :53
+  listen: 53
   ipv6: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   default-nameserver:
   - 223.5.5.5
-  - 180.76.76.76
+  - 8.8.8.8
   nameserver:
   - https://dns.alidns.com/dns-query
   - https://doh.pub/dns-query
   fallback:
-  - 1.1.1.1
-  - 8.8.8.8
+  - https://1.0.0.1/dns-query
+  - tls://dns.google
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -113,7 +113,13 @@ proxies:
   up: 11 Mbps
   down: 55 Mbps
 proxy-groups:
-- name: ♻️ 自动选择
+- name: 节点选择
+  type: select
+  proxies:
+  - 自动选择
+  - 手动选择
+  - DIRECT
+- name: 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
@@ -127,10 +133,17 @@ proxy-groups:
   - VN-01
   - FR-01
   - FR-02
-- name: 🌍 选择代理
+- name: 手动选择
   type: select
   proxies:
-  - ♻️ 自动选择
+  - NL-01
+  - US-01
+  - RU-01
+  - US-02
+  - NL-02
+  - VN-01
+  - FR-01
+  - FR-02
 - name: AUTO
   type: select
   proxies:
@@ -143,6 +156,8 @@ proxy-groups:
   - FR-01
   - FR-02
 rules:
+- DOMAIN,clash.razord.top,DIRECT
+- DOMAIN,yacd.haishan.me,DIRECT
 - GEOIP,LAN,DIRECT
 - GEOIP,CN,DIRECT
-- MATCH,🌍 选择代理
+- MATCH,节点选择
