@@ -38,6 +38,19 @@ proxies:
   up: 11 Mbps
   down: 55 Mbps
 - name: US-01
+  server: 108.181.5.131
+  port: 34008
+  type: tuic
+  uuid: f84c91a4-0125-4495-82f3-732cd0a0bba8
+  password: dongtaiwang.com
+  alpn:
+  - h3
+  sni: bing.com
+  skip-cert-verify: true
+  reduce-rtt: true
+  udp-relay-mode: native
+  congestion-controller: bbr
+- name: US-02
   type: mieru
   server: 108.181.23.41
   port: 28676
@@ -51,7 +64,19 @@ proxies:
   transport: TCP
   username: dongtaiwang.com
   password: dongtaiwang.com
-- name: US-02
+- name: US-03
+  type: hysteria
+  server: 108.181.24.77
+  port: 11512
+  auth-str: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
+- name: US-04
   type: hysteria
   server: 108.181.24.77
   port: 11512
@@ -112,6 +137,62 @@ proxies:
   protocol: udp
   up: 11 Mbps
   down: 55 Mbps
+- name: US-05
+  type: hysteria
+  server: 208.87.243.151
+  port: 17549
+  auth_str: dongtaiwang.com
+  alpn:
+  - h3
+  sni: www.bing.com
+  skip-cert-verify: true
+  up: 11 Mbps
+  down: 55 Mbps
+- name: US-06
+  type: hysteria
+  server: 108.181.24.77
+  port: 11512
+  auth-str: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
+- name: RU-02
+  type: hysteria
+  server: 185.22.155.71
+  port: 10803
+  auth_str: dongtaiwang.com
+  alpn:
+  - h3
+  sni: www.bing.com
+  skip-cert-verify: true
+  up: 11 Mbps
+  down: 55 Mbps
+- name: UnknownGeo-01
+  type: hysteria2
+  server: hy2.694463.xyz
+  port: 10011
+  password: dongtaiwang.com
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: TW-01
+  type: vless
+  server: 1.162.51.106
+  port: 37898
+  uuid: ec302de4-6b3d-4f03-a228-3c6d303ed370
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.yahoo.com
+  network: tcp
+  client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: /
+  reality-opts:
+    public-key: v6uWJJmVGFPd0K040QK3PJHCbPc74kXFoQmAhpu30jQ
+    short-id: e12d7fdb
 proxy-groups:
 - name: 节点选择
   type: select
@@ -127,34 +208,55 @@ proxy-groups:
   proxies:
   - NL-01
   - US-01
-  - RU-01
   - US-02
+  - RU-01
+  - US-03
+  - US-04
   - NL-02
   - VN-01
   - FR-01
   - FR-02
+  - US-05
+  - US-06
+  - RU-02
+  - UnknownGeo-01
+  - TW-01
 - name: 手动选择
   type: select
   proxies:
   - NL-01
   - US-01
-  - RU-01
   - US-02
+  - RU-01
+  - US-03
+  - US-04
   - NL-02
   - VN-01
   - FR-01
   - FR-02
+  - US-05
+  - US-06
+  - RU-02
+  - UnknownGeo-01
+  - TW-01
 - name: AUTO
   type: select
   proxies:
   - NL-01
   - US-01
-  - RU-01
   - US-02
+  - RU-01
+  - US-03
+  - US-04
   - NL-02
   - VN-01
   - FR-01
   - FR-02
+  - US-05
+  - US-06
+  - RU-02
+  - UnknownGeo-01
+  - TW-01
 rules:
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT
