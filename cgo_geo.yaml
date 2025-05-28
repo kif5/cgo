@@ -113,31 +113,31 @@ proxies:
   protocol: udp
   up: 11 Mbps
   down: 55 Mbps
-- name: FR-01
-  type: hysteria
-  server: 51.158.205.126
-  port: 36194
-  auth-str: dongtaiwang.com
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  up: 11 Mbps
-  down: 55 Mbps
-- name: FR-02
-  type: hysteria
-  server: 51.158.205.126
-  port: 36194
-  auth-str: dongtaiwang.com
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  protocol: udp
-  up: 11 Mbps
-  down: 55 Mbps
 - name: US-05
+  type: hysteria
+  server: 198.40.52.27
+  port: 36194
+  auth-str: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
+- name: US-06
+  type: hysteria
+  server: 198.40.52.27
+  port: 36194
+  auth-str: dongtaiwang.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  protocol: udp
+  up: 11 Mbps
+  down: 55 Mbps
+- name: US-07
   type: hysteria
   server: 208.87.243.151
   port: 17549
@@ -148,7 +148,7 @@ proxies:
   skip-cert-verify: true
   up: 11 Mbps
   down: 55 Mbps
-- name: US-06
+- name: US-08
   type: hysteria
   server: 108.181.24.77
   port: 11512
@@ -174,7 +174,7 @@ proxies:
 - name: UnknownGeo-01
   type: hysteria2
   server: hy2.694463.xyz
-  port: 10011
+  port: 30033
   password: dongtaiwang.com
   sni: www.bing.com
   skip-cert-verify: true
@@ -214,10 +214,10 @@ proxy-groups:
   - US-04
   - NL-02
   - VN-01
-  - FR-01
-  - FR-02
   - US-05
   - US-06
+  - US-07
+  - US-08
   - RU-02
   - UnknownGeo-01
   - TW-01
@@ -232,10 +232,10 @@ proxy-groups:
   - US-04
   - NL-02
   - VN-01
-  - FR-01
-  - FR-02
   - US-05
   - US-06
+  - US-07
+  - US-08
   - RU-02
   - UnknownGeo-01
   - TW-01
@@ -250,10 +250,10 @@ proxy-groups:
   - US-04
   - NL-02
   - VN-01
-  - FR-01
-  - FR-02
   - US-05
   - US-06
+  - US-07
+  - US-08
   - RU-02
   - UnknownGeo-01
   - TW-01
