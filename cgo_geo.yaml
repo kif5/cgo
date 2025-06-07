@@ -65,17 +65,19 @@ proxies:
   username: dongtaiwang.com
   password: dongtaiwang.com
 - name: US-03
-  type: hysteria
-  server: 108.181.24.77
-  port: 11512
-  auth-str: dongtaiwang.com
-  sni: apple.com
-  skip-cert-verify: true
+  type: anytls
+  server: 208.87.243.187
+  port: 61289
+  password: dongtaiwang.com
+  client-fingerprint: chrome
+  udp: true
+  idle-session-check-interval: 30
+  idle-session-timeout: 30
+  min-idle-session: 0
   alpn:
-  - h3
-  protocol: udp
-  up: 11 Mbps
-  down: 55 Mbps
+  - h2
+  - http/1.1
+  skip-cert-verify: true
 - name: US-04
   type: hysteria
   server: 108.181.24.77
@@ -101,10 +103,10 @@ proxies:
   reduce-rtt: true
   udp-relay-mode: native
   congestion-controller: bbr
-- name: VN-01
+- name: NL-03
   type: hysteria
-  server: 123.30.149.21
-  port: 29597
+  server: 62.210.10.113
+  port: 22662
   auth-str: dongtaiwang.com
   sni: apple.com
   skip-cert-verify: true
@@ -171,9 +173,23 @@ proxies:
   skip-cert-verify: true
   up: 11 Mbps
   down: 55 Mbps
-- name: UnknownGeo-01
+- name: RU-03
   type: hysteria2
-  server: hy2.694463.xyz
+  server: 45.129.2.108
+  port: 30033
+  password: dongtaiwang.com
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: RU-04
+  type: hysteria2
+  server: 46.17.41.217
+  port: 30033
+  password: dongtaiwang.com
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: RU-05
+  type: hysteria2
+  server: 46.29.163.171
   port: 30033
   password: dongtaiwang.com
   sni: www.bing.com
@@ -213,13 +229,15 @@ proxy-groups:
   - US-03
   - US-04
   - NL-02
-  - VN-01
+  - NL-03
   - US-05
   - US-06
   - US-07
   - US-08
   - RU-02
-  - UnknownGeo-01
+  - RU-03
+  - RU-04
+  - RU-05
   - TW-01
 - name: 手动选择
   type: select
@@ -231,13 +249,15 @@ proxy-groups:
   - US-03
   - US-04
   - NL-02
-  - VN-01
+  - NL-03
   - US-05
   - US-06
   - US-07
   - US-08
   - RU-02
-  - UnknownGeo-01
+  - RU-03
+  - RU-04
+  - RU-05
   - TW-01
 - name: AUTO
   type: select
@@ -249,13 +269,15 @@ proxy-groups:
   - US-03
   - US-04
   - NL-02
-  - VN-01
+  - NL-03
   - US-05
   - US-06
   - US-07
   - US-08
   - RU-02
-  - UnknownGeo-01
+  - RU-03
+  - RU-04
+  - RU-05
   - TW-01
 rules:
 - DOMAIN,clash.razord.top,DIRECT
