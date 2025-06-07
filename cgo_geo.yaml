@@ -209,11 +209,6 @@ proxies:
   reality-opts:
     public-key: v6uWJJmVGFPd0K040QK3PJHCbPc74kXFoQmAhpu30jQ
     short-id: e12d7fdb
-- name: UnknownGeo-01
-  type: hysteria2
-  server: cqpptyidvrtc.eu-central-1.clawcloudrun.com
-  port: '20000'
-  password: chreng.!!1111aaaa
 proxy-groups:
 - name: 节点选择
   type: select
@@ -244,7 +239,6 @@ proxy-groups:
   - RU-04
   - RU-05
   - TW-01
-  - UnknownGeo-01
 - name: 手动选择
   type: select
   proxies:
@@ -265,7 +259,6 @@ proxy-groups:
   - RU-04
   - RU-05
   - TW-01
-  - UnknownGeo-01
 - name: AUTO
   type: select
   proxies:
@@ -286,7 +279,6 @@ proxy-groups:
   - RU-04
   - RU-05
   - TW-01
-  - UnknownGeo-01
 rules:
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT
