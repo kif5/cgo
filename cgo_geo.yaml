@@ -25,6 +25,18 @@ dns:
     ipcidr:
     - 240.0.0.0/4
 proxies:
+- name: de-hui
+  type: hysteria2
+  server: fqiszucynjkx.eu-central-1.clawcloudrun.com
+  port: '35170'
+  password: chreng.sddf234
+  skip-cert-verify: true
+- name: us-hui
+  type: hysteria2
+  server: vv.1hjn.com
+  port: '44755'
+  password: chreng.sdfdds545652xcvv!
+  skip-cert-verify: true
 - name: NL-01
   type: hysteria
   server: 62.210.10.113
@@ -213,6 +225,8 @@ proxy-groups:
 - name: 节点选择
   type: select
   proxies:
+  - de-hui
+  - us-hui
   - 自动选择
   - 手动选择
   - DIRECT
